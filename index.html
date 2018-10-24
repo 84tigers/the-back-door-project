@@ -1,19 +1,106 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
 </head>
+
 <body>
 
+    <header>
+        <p class="title">the back door</p>
+        <button id="menu-btn" type="button">
+            <!-- hamburger -->
+            <i class="fas fa-bars"></i>
+            <!-- close button -->
+            <i class="fas fa-times menu-close"></i>
+        </button>
+        <div class="drop-menu">
+            <a href="#glass">Glass</a>
+            <a href="#wood">Wood</a>
+            <a href="#metal">Metal</a>
+            <a href="#trap">Trap</a>
+        </div>
+    </header>
+    <section class="info">
+        <p>Welcome!</p>
+        <p>We love doors. Thanks for opening the door to our shop! Come on knock on our door if you need more.</p>
+    </section>
+    <section class="carousel">
+        <!-- Carousel goes here -->
+        <i class="fas fa-angle-left"></i>
+        <!-- add an array of categories? -->
+        <p class="carousel-category">category here</p>
+        <i class="fas fa-angle-right"></i>
+    </section>
+    <section id="glass">
+
+        <!----------- DOOR ITEM TEMPLATE ---------->
+        <div class="door-info">
+            <img class="door" src="" alt="">
+            <p class="item-name">Name</p>
+            <p class="item-price">Price</p>
+            <i class="fas fa-cart-plus"></i>
+        </div>
+        <!----------------------------------------->
+
+    </section>
+    <section id="wood">
+
+    </section>
+    <section id="metal">
+
+    </section>
+    <section id="trap">
+
+    </section>
+    <button type="button">
+        <i class="fas fa-shopping-cart"></i>
+    </button>
+
+    <div class="cart">
+        <p>Door name (q) ($)</p>
+        <p>Door name (q) ($)</p>
+        <p>Door name (q) ($)</p>
+        <p>Subtotal: ($)</p>
+        <p>Sales Tax: ($)</p>
+        <p>Total: ($)</p>
+        <button class="checkout" type="button"></button>
+    </div>
+
+    <div class="payment">
+        <button type="button" class="cash-btn">cash</button>
+        <button type="button" class="credit-btn">credit</button>
+        <button type="button"><i class="fas fa-times pay-close"></i></button>
+
+        <form id="cash-payment">
+            <p class="tender-amt">Tendered Amount:</p>
+            <input type="number" class="tender">
+            <button class="pay" id="cash-pay-btn" type="button">pay</button>
+        </form>
+        <form id="credit-payment">
+            <label for="card-num">Credit Card Number:</label>
+            <input type="number" id="card-num" name="card-num" placeholder="Card number">
+            <label for="exp-date">Expiration Date:</label>
+            <input type="number" id="exp-date" name="exp-date" placeholder="Exp date">
+            <label for="cvv-num">CVV:</label>
+            <input type="number" id="cvv-num" name="cvv-num" placeholder="CVV">
+            <button class="pay" id="credit-pay-btn" type="button">pay</button>
+        </form>
+    </div>
 
 
 
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="scripts/script.js"></script>
 </body>
+
 </html>
