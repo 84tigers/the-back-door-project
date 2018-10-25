@@ -94,18 +94,36 @@
     <section id="trap">
 
     </section>
-    <button type="button">
+    <button type="button" class="shopping-cart">
         <i class="fas fa-shopping-cart"></i>
     </button>
 
     <div class="cart">
-        <p>Door name (q) ($)</p>
-        <p>Door name (q) ($)</p>
-        <p>Door name (q) ($)</p>
-        <p>Subtotal: ($)</p>
-        <p>Sales Tax: ($)</p>
-        <p>Total: ($)</p>
-        <button class="checkout" type="button"></button>
+        <section class="total-items">
+            <section class="cart-close-btn">
+                <button id="close-btn" type="button">
+                    <i class="fas fa-times"></i>
+                </button>
+            </section>
+            <section class="item">
+                <p>Door name</p>
+                <p>($)</p>
+            </section>
+            <section class="item">
+                <p>Door name</p>
+                <p>($)</p>
+            </section>
+            <section class="item">
+                <p>Door name</p>
+                <p>($)</p>
+            </section>
+        </section>
+        <section class="totals">
+            <p>Subtotal: ($)</p>
+            <p>Sales Tax: ($)</p>
+            <p>Total: ($)</p>
+        </section>
+        <button class="checkout" type="button">Check Out</button>
     </div>
 
     <div class="payment">
