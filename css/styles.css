@@ -253,6 +253,9 @@ header {
 #trap-section {
     margin-bottom: 60px;
 }
+.fa-heart {
+    font-size: 12px
+}
 
 /***********************************/
 /**         CHECKOUT FORM         **/
