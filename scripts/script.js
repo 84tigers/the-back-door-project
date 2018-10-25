@@ -1,8 +1,12 @@
 "use strict";
 
 $(document).ready(() => {
-
+  
+    $(".cart").hide()
+    $(".payment").hide()
+  
     $(document)
+    /* Drop-down menu */
     .on("click", ".fa-bars", (event) => {
         $(".drop-menu").css("display", "flex");
         $(event.target).hide();
@@ -13,8 +17,103 @@ $(document).ready(() => {
         $(event.target).hide();
         $(".fa-bars").show();
     })
+    /* Shopping Cart */
+    .on("click", ".shopping-cart", (event) => {
+        $(".cart").show()
+    })
+    .on("click", ("#close-btn"), (event) => {
+        $(".cart").hide();
+    })
+    .on("click", ".checkout", (event) => {
+        $(".cart").hide();
+        $(".payment").show();
+    });
+
+
+    /* Shopping Cart Additions */
+
+    // Makes arry of doors
+    const doors = [];
+
+    // DISPLAY TOTAL
+    const displayTotals = (subTotal, salesTax, total) => {
+        $("#subTotal").text(`$${subTotal}`);
+        $("#salesTax").text(`$${salesTax}`);
+        $("#total").text(`$${total}`);
+    };
+
+    // Add door to cart
+    const display = () => {
+        let subTotal = 0;
+        let salesTax = 0;
+        let total = 0;
+        const container = $("#door-list");
+        $(container).html("");
+        for (let door of doors) {
+            subTotal += door.price;
+            salesTax = (subTotal*.06);
+            total = (subTotal+salesTax);
+            container.append(`
+            <section class="item">
+                <p>${door.name}</p>
+                <p>$${door.price}</p>
+            </section>
+            `);
+        }
+        displayTotals(subTotal, salesTax, total);
+    };
+    // Listens for click on cart plus, then pushes to array
+    $(document).on("click", ".fa-cart-plus", (event) => {
+        // let container = 
+        // Need to take data from container
+
+        const doorName = event.target.parentElement.children[0].innerText;
+        const doorPrice = Number(event.target.parentElement.children[1].innerText.replace(/\D/g, ''));
+
+        doors.push({
+            name: doorName,
+            price: doorPrice
+        });
+        display();
+    });
+
+
+
+
+
+
 
 
 
 
 });
+
+/* Carousel */
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
