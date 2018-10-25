@@ -36,12 +36,34 @@
         <p>Come on knock on our door if you need more. We welcome you to come on through to the other side with us.</p>
     </section>
     <section class="carousel">
-        <!-- Carousel goes here -->
-        <i class="fas fa-angle-left"></i>
-        <!-- add an array of categories? -->
-        <p class="carousel-category">category here</p>
-        <i class="fas fa-angle-right"></i>
+        <div class="mySlides fade">
+            <a href="#glass"><img class="carousel-img" id="glass-carousel" src="/images/carousel-doors/glass-carousel-door.jpg"></a>
+            <a href="#glass" class="carousel-category">glass</a>
+        </div>
+        <div class="mySlides fade">
+            <a href="#wood"><img class="carousel-img" id="wood-carousel" src="/images/carousel-doors/wood-pattern-carousel-door.jpg"></a>
+            <a href="#wood" class="carousel-category">wood</a>
+        </div>
+        <div class="mySlides fade">
+            <a href="#metal"><img class="carousel-img" id="metal-carousel" src="/images/carousel-doors/metal-carousel-door.jpg"></a>
+            <a href="#metal" class="carousel-category">metal</a>
+        </div>
+        <div class="mySlides fade">
+            <a href="#trap"><img class="carousel-img" id="trap-carousel" src="/images/carousel-doors/trap-carousel-door.jpg"></a>
+            <a href="#trap" class="carousel-category">trap</a>
+        </div>
+
+        <i class="fas fa-angle-left prev" onclick="plusSlides(-1)"></i>
+        <i class="fas fa-angle-right next" onclick="plusSlides(1)"></i>
     </section>
+
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
     <section id="glass">
 
         <!----------- DOOR ITEM TEMPLATE ---------->
@@ -50,11 +72,18 @@
             <div class="door-info-txt">
                 <p class="item-name">Jim Morrison</p>
                 <p class="item-price">$699</p>
-                <i class="door-cart" class="fas fa-cart-plus"></i>
+                <i class="fas fa-cart-plus"></i>
             </div>
         </div>
         <!----------------------------------------->
-
+        <div class="door-info">
+            <img class="door" src="images/doors.jpg" alt="">
+            <div class="door-info-txt">
+                <p class="item-name">Jim Morrison</p>
+                <p class="item-price">$699</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
     </section>
     <section id="wood">
 
