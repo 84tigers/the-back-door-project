@@ -109,7 +109,7 @@ display: none;
     background-clip: padding-box;
 }
 .door-info-txt {
-    display: relative;
+    position: relative;
     height: 12vw;
     border-radius: 0 0 10px 10px;
     background-color: rgba(93, 94, 96, 1);
