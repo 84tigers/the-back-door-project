@@ -361,7 +361,7 @@ header {
 .payment {
      width: 80%;
      max-width: 400px;
-     height: 40%;
+     height: 280px;
      background-color: white;
      position: fixed;
      top: 20%;
@@ -381,6 +381,7 @@ header {
     color: white;
     margin-top: 10px;
     margin-left: 10px;
+    cursor: pointer;
     
 }
 /* INDIVIDUAL CLOSE BUTTON */
@@ -425,6 +426,7 @@ header {
     width: 30%;
     padding: 0.5em;
     color: white;
+    cursor: pointer;
 }
 
 /* CREDIT CARD FORM */
@@ -484,6 +486,7 @@ header {
     width: 30%;
     padding: 0.5em;
     color: white;
+    cursor: pointer;
 }
 
 /***********************************/
