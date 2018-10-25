@@ -136,6 +136,11 @@ display: none;
     right: -80%;
 }
  */
+
+ /********************/
+/** PAYMENT FORMS   **/
+/********************/
+
 .payment-btn-container {
     display: flex;
     flex-direction: row;
@@ -143,8 +148,6 @@ display: none;
     width: 100%;
 }
 
-
-/* COMPLETE payment CONTAINER */
 .payment {
      width: 80%;
      max-width: 400px;
@@ -178,21 +181,16 @@ display: none;
     margin-right: 10px;
     margin-top: 10px;
     color: rgba(78, 76, 103, 1);
-
 }
 
-/* FORM CONTAINING INPUTS */
+/* FORM CONTAINING CASH INPUTS */
 #cash-payment {
     flex-basis: 100%;
     padding: 15% 0;
     display: none;
 
 }
-
-.tender-amt{
-
-}
-
+/* CASH INPUT  */
 .tender-amt, .tender  {
    margin: 1 auto;
    margin-bottom: 1.5em;
@@ -208,8 +206,6 @@ display: none;
 }
 
 #cash-pay-btn {
-    /* margin-left: 80%; */
-    /* margin-top: 20%; */
     position: relative;
     left: 70%;
     transform: translateX(-50%);
@@ -219,25 +215,22 @@ display: none;
     width: 30%;
     padding: 0.5em;
     color: white;
-    /* display: block; */
 }
 
+/* CREDIT CARD FORM */
+
+/* USED FOR LAYOUT ONLY */
 #credit-payment, #credit-pay-btn, #cvv-num, #exp-date, #card-num{
     /* display: none; */
 }
 
 #credit-payment {
     padding: 15% 0;
-    /* display: flex;
-   justify-content: flex-start; */
 }
 
 #credit-pay-btn, #cvv-num, #exp-date, #card-num {
     margin: 1 auto;
    margin-bottom: 1.5em;
-   /* margin-left: 40px; */
-   /* display: block; */
-    /* display: none; */
 }
 
 #cvv-num{
@@ -269,7 +262,6 @@ display: none;
     background-color: rgba(249, 237, 212, 1);
     border-bottom: 2px solid  rgba(152, 95, 111, 1);
     color: rgba(78, 76, 103, 1);
-
 }
 
 .credit-label {
@@ -287,5 +279,4 @@ display: none;
     width: 30%;
     padding: 0.5em;
     color: white;
-    /* display: block; */
 }
