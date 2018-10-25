@@ -54,6 +54,7 @@ header {
     padding-left: 10px;
 }
 #menu-btn {
+    cursor: pointer;
     background: none;
     border: none;
     float: right;
@@ -244,6 +245,7 @@ header {
     font-size: 1em;
 }
 .fa-cart-plus {
+    cursor: pointer;
     position: absolute;
     font-size: 20px;
     bottom: 5px;
@@ -273,6 +275,7 @@ header {
 }
 
 .fa-shopping-cart {
+    cursor: pointer;
     font-size: 25px;
 }
 
@@ -286,8 +289,15 @@ header {
     transform: translateX(-50%);
     box-shadow: 0 1px 12px rgba(78, 76, 103, 1);
     max-width: 400px;
+    max-height: 500px;
+    overflow: auto;
 }
-
+#cart-title {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+}
 .total-items {
     margin: 10px;
 }
@@ -301,8 +311,13 @@ header {
     border-top: 2px solid rgba(78, 76, 103, 1);
     margin: 10px;
 }
+.totals-line {
+    display: flex;
+    justify-content: space-between;
+}
 
 .checkout {
+    cursor: pointer;
     position: relative;
     width: 80%;
     left: 50%;
@@ -322,6 +337,7 @@ header {
 }
 
 #close-btn {
+    cursor: pointer;
     position: absolute;
     right: 10px;
     background-color: rgba(78, 76, 103, 1);
@@ -330,8 +346,6 @@ header {
     height: 20px;
     border-radius: 5px;
 }
-
-
 
 
 

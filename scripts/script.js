@@ -27,7 +27,64 @@ $(document).ready(() => {
     .on("click", ".checkout", (event) => {
         $(".cart").hide();
         $(".payment").show();
-    })
+    });
+
+
+    /* Shopping Cart Additions */
+
+    // Makes arry of doors
+    const doors = [];
+
+    // DISPLAY TOTAL
+    const displayTotals = (subTotal, salesTax, total) => {
+        $("#subTotal").text(`$${subTotal}`);
+        $("#salesTax").text(`$${salesTax}`);
+        $("#total").text(`$${total}`);
+    };
+
+    // Add door to cart
+    const display = () => {
+        let subTotal = 0;
+        let salesTax = 0;
+        let total = 0;
+        const container = $("#door-list");
+        $(container).html("");
+        for (let door of doors) {
+            subTotal += door.price;
+            salesTax = (subTotal*.06);
+            total = (subTotal+salesTax);
+            container.append(`
+            <section class="item">
+                <p>${door.name}</p>
+                <p>$${door.price}</p>
+            </section>
+            `);
+        }
+        displayTotals(subTotal, salesTax, total);
+    };
+    // Listens for click on cart plus, then pushes to array
+    $(document).on("click", ".fa-cart-plus", (event) => {
+        // let container = 
+        // Need to take data from container
+
+        const doorName = event.target.parentElement.children[0].innerText;
+        const doorPrice = Number(event.target.parentElement.children[1].innerText.replace(/\D/g, ''));
+
+        doors.push({
+            name: doorName,
+            price: doorPrice
+        });
+        display();
+    });
+
+
+
+
+
+
+
+
+
 
 });
 
