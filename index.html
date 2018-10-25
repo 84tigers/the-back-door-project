@@ -286,23 +286,35 @@
                     <i class="fas fa-times"></i>
                 </button>
             </section>
-            <section class="item">
-                <p>Door name</p>
-                <p>($)</p>
-            </section>
-            <section class="item">
-                <p>Door name</p>
-                <p>($)</p>
-            </section>
-            <section class="item">
-                <p>Door name</p>
-                <p>($)</p>
+            <p id="cart-title">your cart:</p>
+            <section id="door-list">
+                <section class="item">
+                    <p>Door name</p>
+                    <p>($)</p>
+                </section>
+                <section class="item">
+                    <p>Door name</p>
+                    <p>($)</p>
+                </section>
+                <section class="item">
+                    <p>Door name</p>
+                    <p>($)</p>
+                </section>
             </section>
         </section>
         <section class="totals">
-            <p>Subtotal: ($)</p>
-            <p>Sales Tax: ($)</p>
-            <p>Total: ($)</p>
+            <section class="totals-line">
+                <p>Subtotal:</p>
+                <p id="subTotal">($)</p>
+            </section>
+            <section class="totals-line">
+                <p>Sales Tax:</p>
+                <p id="salesTax">($)</p>
+            </section>
+            <section class="totals-line">
+                <p>Total:</p>
+                <p id="total">($)</p>
+            </section>
         </section>
         <button class="checkout" type="button">Check Out</button>
     </div>
