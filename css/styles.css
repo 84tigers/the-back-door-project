@@ -368,6 +368,7 @@ header {
      left: 50%;
      transform: translateX(-50%);
      box-shadow: 0 1px 12px rgba(93, 94, 96, 1);
+     border-radius: 10px;
 } 
 
 /* INDIVIDUAL PAYMENT BUTTONS AT TOP OF PAYMENT CONTAINER */
@@ -520,3 +521,4 @@ header {
     #menu-btn {
         display: none;
     }
+}
