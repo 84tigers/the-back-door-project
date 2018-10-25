@@ -136,5 +136,156 @@ display: none;
     right: -80%;
 }
  */
+.payment-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+}
 
- 
+
+/* COMPLETE payment CONTAINER */
+.payment {
+     width: 80%;
+     max-width: 400px;
+     height: 40%;
+     background-color: white;
+     position: fixed;
+     top: 20%;
+     left: 10%;
+     right: 10%;
+     box-shadow: 0 1px 12px rgba(93, 94, 96, 1);
+    
+}
+
+/* INDIVIDUAL PAYMENT BUTTONS AT TOP OF PAYMENT CONTAINER */
+.paymnt-btn {
+    border-style: none;
+    background-color: rgba(78, 76, 103, 1);
+    border-radius: 5px;
+    width: 30%;
+    padding: 0.5em;
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+/* INDIVIDUAL CLOSE BUTTON */
+.pay-close {
+    border: none;
+    border-style: none;
+    margin-left: auto;
+    margin-right: 10px;
+    margin-top: 10px;
+    color: rgba(78, 76, 103, 1);
+
+}
+
+/* FORM CONTAINING INPUTS */
+#cash-payment {
+    flex-basis: 100%;
+    padding: 15% 0;
+    display: none;
+
+}
+
+.tender-amt{
+
+}
+
+.tender-amt, .tender  {
+   margin: 1 auto;
+   margin-bottom: 1.5em;
+   margin-left: 10px;
+}
+
+.tender {
+    border: none;
+    background-color: rgba(249, 237, 212, 1);
+    border-bottom: 2px solid  rgba(152, 95, 111, 1);
+    color: rgba(78, 76, 103, 1);
+    width: 90%;
+}
+
+#cash-pay-btn {
+    /* margin-left: 80%; */
+    /* margin-top: 20%; */
+    position: relative;
+    left: 70%;
+    transform: translateX(-50%);
+    border-style: none;
+    background-color: rgba(78, 76, 103, 1);
+    border-radius: 5px;
+    width: 30%;
+    padding: 0.5em;
+    color: white;
+    /* display: block; */
+}
+
+#credit-payment, #credit-pay-btn, #cvv-num, #exp-date, #card-num{
+    /* display: none; */
+}
+
+#credit-payment {
+    padding: 15% 0;
+    /* display: flex;
+   justify-content: flex-start; */
+}
+
+#credit-pay-btn, #cvv-num, #exp-date, #card-num {
+    margin: 1 auto;
+   margin-bottom: 1.5em;
+   /* margin-left: 40px; */
+   /* display: block; */
+    /* display: none; */
+}
+
+#cvv-num{
+    width: 20%;
+    align-self: flex-start;
+    margin-left: 10px;
+    border: none;
+    background-color: rgba(249, 237, 212, 1);
+    border-bottom: 2px solid  rgba(152, 95, 111, 1);
+    color: rgba(78, 76, 103, 1);
+}
+
+#exp-date {
+    width: 60%;
+    align-self: flex-start;
+    margin-left: 10px;
+    border: none;
+    background-color: rgba(249, 237, 212, 1);
+    border-bottom: 2px solid  rgba(152, 95, 111, 1);
+    color: rgba(78, 76, 103, 1);
+
+}
+
+#card-num {
+    width: 80%;
+    align-self: flex-start;
+    margin-left: 10px;
+    border: none;
+    background-color: rgba(249, 237, 212, 1);
+    border-bottom: 2px solid  rgba(152, 95, 111, 1);
+    color: rgba(78, 76, 103, 1);
+
+}
+
+.credit-label {
+    margin-left: 10px;
+    display: block;
+}
+
+#credit-pay-btn {
+    position: relative;
+    left: 57%;
+    transform: translateX(-50%);
+    border-style: none;
+    background-color: rgba(78, 76, 103, 1);
+    border-radius: 5px;
+    width: 30%;
+    padding: 0.5em;
+    color: white;
+    /* display: block; */
+}
