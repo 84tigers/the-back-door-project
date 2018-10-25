@@ -250,6 +250,9 @@ header {
     right: 8px;
     color: rgba(249, 237, 212, 1);
 }
+#trap-section {
+    margin-bottom: 60px;
+}
 
 /***********************************/
 /**         CHECKOUT FORM         **/
