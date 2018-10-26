@@ -100,7 +100,7 @@ $(document).ready(() => {
             if (event) {
             counter++;
             $("#amount-counter").append(counter);
-            }
+        }
 
     });
 
