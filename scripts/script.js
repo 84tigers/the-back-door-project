@@ -68,7 +68,8 @@ $(document).ready(() => {
         let subTotal = 0;
         let salesTax = 0;
         let total = 0;
-        const container = $(".door-list");
+        let counter = 0
+        const container = $("#door-list");
         $(container).html("");
         for (let door of doors) {
             subTotal += door.price;
@@ -76,13 +77,22 @@ $(document).ready(() => {
             total = (subTotal+salesTax);
             container.append(`
             <section class="item">
-                <p>${door.name}</p>
+                <section class="name-item">
+                    <i class="fas fa-minus-square" counter="${counter}"></i>
+                    <p>${door.name}</p>
+                </section>
                 <p>$${door.price}</p>
             </section>
             `);
+            counter++
         }
         displayTotals(subTotal, salesTax, total);
     };
+  
+    $(document).on("click", ".fa-minus-square", (event) => {
+        doors.splice($(event.target).attr("counter"), 1);
+        display();
+    })
 
     // Listens for click on cart plus, then pushes to array
     $(document).on("click", ".fa-cart-plus", (event) => {

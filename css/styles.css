@@ -252,6 +252,9 @@ header {
     right: 8px;
     color: rgba(249, 237, 212, 1);
 }
+.fa-cart-plus:hover {
+    color: rgb(202, 163, 174);
+}
 #trap-section {
     margin-bottom: 60px;
 }
@@ -263,6 +266,7 @@ header {
 /**         CHECKOUT FORM         **/
 /***********************************/
 
+
 .shopping-cart {
     position: fixed;
     bottom: 10px;
@@ -273,9 +277,25 @@ header {
     border: none;
     background-color: rgba(152, 95, 111, 1);
 }
+.shopping-cart:hover {
+    background-color: rgba(78, 76, 103, 1);
+    color: rgba(249, 237, 212, 1);
+}
 .fa-shopping-cart {
     cursor: pointer;
     font-size: 25px;
+}
+.name-item {
+    width: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.fa-minus-square {
+    margin-right: 5px;
+    color: rgba(78, 76, 103, 1);
+    cursor: pointer;
 }
 .cart {
     background-color: white;
@@ -290,12 +310,14 @@ header {
     max-height: 500px;
     overflow: auto;
 }
+
 .cart-title {
     font-family: 'Abril Fatface', cursive;
     font-size: 22px;
     text-align: center;
     margin: 0;
 }
+
 .total-items {
     margin: 10px;
 }
