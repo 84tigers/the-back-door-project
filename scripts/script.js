@@ -20,6 +20,7 @@ $(document).ready(() => {
     /* Shopping Cart */
     .on("click", ".shopping-cart", (event) => {
         $(".cart").show()
+        $(".payment").hide();
     })
     .on("click", ("#close-btn"), (event) => {
         $(".cart").hide();
