@@ -37,9 +37,9 @@ $(document).ready(() => {
 
     // DISPLAY TOTAL
     const displayTotals = (subTotal, salesTax, total) => {
-        $("#subTotal").text(`$${subTotal}`);
-        $("#salesTax").text(`$${salesTax}`);
-        $("#total").text(`$${total}`);
+        $("#subTotal").text(`$${subTotal.toFixed(2)}`);
+        $("#salesTax").text(`$${(Math.round(salesTax*100)/100).toFixed(2)}`);
+        $("#total").text(`$${(Math.round(total*100)/100).toFixed(2)}`);
     };
 
     // Add door to cart
@@ -76,14 +76,6 @@ $(document).ready(() => {
         });
         display();
     });
-
-
-
-
-
-
-
-
 
 
 });
