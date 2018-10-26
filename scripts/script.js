@@ -28,7 +28,22 @@ $(document).ready(() => {
     .on("click", ".checkout", (event) => {
         $(".cart").hide();
         $(".payment").show();
-    });
+    })
+    .on("click", ".paymnt-btn.cash-btn", (event) => {
+        $("#cash-payment").show()
+        $("#credit-payment").hide()
+    })
+    .on("click", ".paymnt-btn.credit-btn", (event) => {
+        $("#credit-payment").show()
+        $("#cash-payment").hide()
+    })
+    .on("click", "#credit-pay-btn", "#cash-pay-btn", (event) => {
+        $(".payment").hide()
+    })
+    .on("click", ".pay-close", (event) => {
+        $(".payment").hide()
+    })
+
 
 
     /* Shopping Cart Additions */
