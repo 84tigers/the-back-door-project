@@ -2,9 +2,8 @@
 
 $(document).ready(() => {
   
-    $(".cart").hide();
-    $(".payment").hide();
-    $("#receipt").hide();
+    $(".cart").hide()
+    $(".payment").hide()
   
     $(document)
     /* Drop-down menu */
@@ -21,10 +20,8 @@ $(document).ready(() => {
     /* Shopping Cart */
     .on("click", ".shopping-cart", (event) => {
         $(".cart").show();
-        $(".payment").hide();
-
     })
-    .on("click", ("#cart-close"), (event) => {
+    .on("click", ("#close-btn"), (event) => {
         $(".cart").hide();
     })
     .on("click", ".checkout", (event) => {
@@ -47,12 +44,7 @@ $(document).ready(() => {
         $("#cash-payment").fadeIn();
         $(".cash-btn").css("opacity", "0.8").css("cursor","auto");
         $(".credit-btn").css("opacity", "1").css("cursor","pointer");
-    })   
-/* Receipt */
-    .on("click", ("#receipt-close"), (event) => {
-        $("#receipt").hide();
     });
-
 
 
     /* Shopping Cart Additions */
@@ -62,9 +54,9 @@ $(document).ready(() => {
 
     // DISPLAY TOTAL
     const displayTotals = (subTotal, salesTax, total) => {
-        $("#subTotal").text(`$${subTotal.toFixed(2)}`);
-        $("#salesTax").text(`$${(Math.round(salesTax*100)/100).toFixed(2)}`);
-        $("#total").text(`$${(Math.round(total*100)/100).toFixed(2)}`);
+        $("#subTotal").text(`$${subTotal}`);
+        $("#salesTax").text(`$${salesTax}`);
+        $("#total").text(`$${total}`);
     };
 
     // Add door to cart
@@ -89,6 +81,9 @@ $(document).ready(() => {
     };
     // Listens for click on cart plus, then pushes to array
     $(document).on("click", ".fa-cart-plus", (event) => {
+        // let container = 
+        // Need to take data from container
+
         const doorName = event.target.parentElement.children[0].innerText;
         const doorPrice = Number(event.target.parentElement.children[1].innerText.replace(/\D/g, ''));
 
@@ -97,7 +92,24 @@ $(document).ready(() => {
             price: doorPrice
         });
         display();
+        
     });
+    
+    $(document).on("click", ".fa-cart-plus", (event) => {
+        let counter;
+            if (event) {
+            counter++;
+            $("#amount-counter").append(counter);
+            }
+
+    });
+
+
+
+
+
+
+
 
 
 });
