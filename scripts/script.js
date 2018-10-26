@@ -46,7 +46,7 @@ $(document).ready(() => {
         $("#cash-payment").fadeIn();
         $(".cash-btn").css("opacity", "0.8").css("cursor","auto");
         $(".credit-btn").css("opacity", "1").css("cursor","pointer");
-    })   
+    });   
     
 
 
@@ -68,8 +68,8 @@ $(document).ready(() => {
         let subTotal = 0;
         let salesTax = 0;
         let total = 0;
-        let counter = 0
-        const container = $("#door-list");
+        let counter = 0;
+        const container = $(".door-list");
         $(container).html("");
         for (let door of doors) {
             subTotal += door.price;
@@ -92,8 +92,9 @@ $(document).ready(() => {
     $(document).on("click", ".fa-minus-square", (event) => {
         doors.splice($(event.target).attr("counter"), 1);
         display();
-    })
+    });
 
+    let quantity = 0;
     // Listens for click on cart plus, then pushes to array
     $(document).on("click", ".fa-cart-plus", (event) => {
         const doorName = event.target.parentElement.children[0].innerText;
@@ -103,6 +104,11 @@ $(document).ready(() => {
             name: doorName,
             price: doorPrice
         });
+
+        // Cart counter
+        quantity++;
+        $("#amount-counter").text(quantity);
+
         display();
     });
 
@@ -116,7 +122,7 @@ $(document).ready(() => {
             const totalCost = Number($(".total").eq(0).text().replace(/\$/g, ''));
             
             $("#receipt-totals").append(`
-            <section class="totals-line">
+            <section class="totals-line change-container">
                 <p class="payment-data change-due">Change:</p>
                 <p class="payment-data">$${(Math.round((cashReceived - totalCost)*100)/100).toFixed(2)}</p>
             </section>
@@ -125,7 +131,7 @@ $(document).ready(() => {
         } else if ($(event.target).attr("id") === "credit-pay-btn") {
             $("#receipt").show();
         }
-
+        $(".fa-minus-square").hide();
         $(".payment").hide();
     })
     .on("click", "#receipt-close", (event) => {
