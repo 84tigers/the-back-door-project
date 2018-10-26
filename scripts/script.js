@@ -22,7 +22,6 @@ $(document).ready(() => {
     .on("click", ".shopping-cart", (event) => {
         $(".cart").show();
         $(".payment").hide();
-
     })
     .on("click", ("#cart-close"), (event) => {
         $(".cart").hide();
@@ -48,23 +47,20 @@ $(document).ready(() => {
         $(".cash-btn").css("opacity", "0.8").css("cursor","auto");
         $(".credit-btn").css("opacity", "1").css("cursor","pointer");
     })   
-/* Receipt */
-    .on("click", ("#receipt-close"), (event) => {
-        $("#receipt").hide();
-    });
+    
 
 
 
     /* Shopping Cart Additions */
 
     // Makes arry of doors
-    const doors = [];
+    let doors = [];
 
     // DISPLAY TOTAL
     const displayTotals = (subTotal, salesTax, total) => {
-        $("#subTotal").text(`$${subTotal.toFixed(2)}`);
-        $("#salesTax").text(`$${(Math.round(salesTax*100)/100).toFixed(2)}`);
-        $("#total").text(`$${(Math.round(total*100)/100).toFixed(2)}`);
+        $(".subTotal").text(`$${subTotal.toFixed(2)}`);
+        $(".salesTax").text(`$${(Math.round(salesTax*100)/100).toFixed(2)}`);
+        $(".total").text(`$${(Math.round(total*100)/100).toFixed(2)}`);
     };
 
     // Add door to cart
@@ -72,6 +68,7 @@ $(document).ready(() => {
         let subTotal = 0;
         let salesTax = 0;
         let total = 0;
+        let counter = 0
         const container = $("#door-list");
         $(container).html("");
         for (let door of doors) {
@@ -80,13 +77,23 @@ $(document).ready(() => {
             total = (subTotal+salesTax);
             container.append(`
             <section class="item">
-                <p>${door.name}</p>
+                <section class="name-item">
+                    <i class="fas fa-minus-square" counter="${counter}"></i>
+                    <p>${door.name}</p>
+                </section>
                 <p>$${door.price}</p>
             </section>
             `);
+            counter++
         }
         displayTotals(subTotal, salesTax, total);
     };
+  
+    $(document).on("click", ".fa-minus-square", (event) => {
+        doors.splice($(event.target).attr("counter"), 1);
+        display();
+    })
+
     // Listens for click on cart plus, then pushes to array
     $(document).on("click", ".fa-cart-plus", (event) => {
         const doorName = event.target.parentElement.children[0].innerText;
@@ -102,6 +109,35 @@ $(document).ready(() => {
     $(document).on("click", ".fa-cart-plus", (event) => {
         counter++;
         $("#amount-counter").text(quantity);
+    });
+
+    /* Receipt */
+    $(document)
+    .on("click", ".pay", (event) => {
+        if($(event.target).attr("id") === "cash-pay-btn") {
+            const tender = Math.round($("input.tender").val()).toFixed(2);
+            $(".amt-paid").text(`$${tender}`);
+            const cashReceived = Number(tender.replace(/\$/g, ''));
+            const totalCost = Number($(".total").eq(0).text().replace(/\$/g, ''));
+            
+            $("#receipt-totals").append(`
+            <section class="totals-line">
+                <p class="payment-data change-due">Change:</p>
+                <p class="payment-data">$${(Math.round((cashReceived - totalCost)*100)/100).toFixed(2)}</p>
+            </section>
+            `);
+            $("#receipt").show();
+        } else if ($(event.target).attr("id") === "credit-pay-btn") {
+            $("#receipt").show();
+        }
+
+        $(".payment").hide();
+    })
+    .on("click", "#receipt-close", (event) => {
+        $("#receipt").hide();
+        doors = [];
+        quantity = 0;
+        display();
     });
 
 
