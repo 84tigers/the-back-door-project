@@ -4,7 +4,7 @@ $(document).ready(() => {
   
     $(".cart").hide();
     $(".payment").hide();
-    // $("#receipt").hide();
+    $("#receipt").hide();
   
     $(document)
     /* Drop-down menu */
@@ -21,6 +21,7 @@ $(document).ready(() => {
     /* Shopping Cart */
     .on("click", ".shopping-cart", (event) => {
         $(".cart").show();
+        $(".payment").hide();
 
     })
     .on("click", ("#cart-close"), (event) => {
