@@ -272,6 +272,7 @@ header {
     border-radius: 50%;
     border: none;
     background-color: rgba(152, 95, 111, 1);
+<<<<<<< HEAD
 }
 
 .fa-shopping-cart {
@@ -279,6 +280,15 @@ header {
     font-size: 25px;
 }
 
+=======
+}
+
+.fa-shopping-cart {
+    cursor: pointer;
+    font-size: 25px;
+}
+
+>>>>>>> 94940418e05eafdc2a380414073c1c4ce8c6363c
 .cart {
     background-color: white;
     border-radius: 10px;
@@ -359,6 +369,7 @@ header {
 }
 
 .payment {
+<<<<<<< HEAD
     width: 80%;
     max-width: 400px;
     height: 280px;
@@ -375,6 +386,18 @@ header {
     height: 10%;
     margin-left: 10px;
 }
+=======
+     width: 80%;
+     max-width: 400px;
+     height: 40%;
+     background-color: white;
+     position: fixed;
+     top: 20%;
+     left: 50%;
+     transform: translateX(-50%);
+     box-shadow: 0 1px 12px rgba(93, 94, 96, 1);
+} 
+>>>>>>> 94940418e05eafdc2a380414073c1c4ce8c6363c
 
 /* INDIVIDUAL PAYMENT BUTTONS AT TOP OF PAYMENT CONTAINER */
 .paymnt-btn {
@@ -494,7 +517,10 @@ header {
     width: 30%;
     padding: 0.5em;
     color: white;
+<<<<<<< HEAD
     cursor: pointer;
+=======
+>>>>>>> 94940418e05eafdc2a380414073c1c4ce8c6363c
 }
 
 /***********************************/
@@ -531,5 +557,9 @@ header {
     }
     #menu-btn {
         display: none;
+<<<<<<< HEAD
     }
 }
+=======
+    }
+>>>>>>> 94940418e05eafdc2a380414073c1c4ce8c6363c

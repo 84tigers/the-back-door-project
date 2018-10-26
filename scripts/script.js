@@ -25,6 +25,7 @@ $(document).ready(() => {
         $(".cart").hide();
     })
     .on("click", ".checkout", (event) => {
+<<<<<<< HEAD
         $(".cart, #credit-payment").hide();
         $(".payment, #cash-payment").show();
         $(".cash-btn").css("opacity", "0.8").css("cursor","auto");
@@ -44,6 +45,10 @@ $(document).ready(() => {
         $("#cash-payment").fadeIn();
         $(".cash-btn").css("opacity", "0.8").css("cursor","auto");
         $(".credit-btn").css("opacity", "1").css("cursor","pointer");
+=======
+        $(".cart").hide();
+        $(".payment").show();
+>>>>>>> 94940418e05eafdc2a380414073c1c4ce8c6363c
     });
 
 
