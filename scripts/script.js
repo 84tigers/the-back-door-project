@@ -2,8 +2,9 @@
 
 $(document).ready(() => {
   
-    $(".cart").hide()
-    $(".payment").hide()
+    $(".cart").hide();
+    $(".payment").hide();
+    // $("#receipt").hide();
   
     $(document)
     /* Drop-down menu */
@@ -22,13 +23,17 @@ $(document).ready(() => {
         $(".cart").show()
         $(".payment").hide();
     })
-    .on("click", ("#close-btn"), (event) => {
+    .on("click", ("#cart-close"), (event) => {
         $(".cart").hide();
     })
     .on("click", ".checkout", (event) => {
         $(".cart").hide();
         $(".payment").show();
-    });
+    })
+    /* Receipt */
+    .on("click", ("#receipt-close"), (event) => {
+        $("#receipt").hide();
+    })
 
 
     /* Shopping Cart Additions */
