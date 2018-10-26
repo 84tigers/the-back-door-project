@@ -19,31 +19,33 @@ $(document).ready(() => {
     })
     /* Shopping Cart */
     .on("click", ".shopping-cart", (event) => {
-        $(".cart").show()
-        $(".payment").hide();
+        $(".cart").show();
+
     })
     .on("click", ("#close-btn"), (event) => {
         $(".cart").hide();
     })
     .on("click", ".checkout", (event) => {
-        $(".cart").hide();
-        $(".payment").show();
+        $(".cart, #credit-payment").hide();
+        $(".payment, #cash-payment").show();
+        $(".cash-btn").css("opacity", "0.8").css("cursor","auto");
     })
-    .on("click", ".paymnt-btn.cash-btn", (event) => {
-        $("#cash-payment").show()
-        $("#credit-payment").hide()
-    })
-    .on("click", ".paymnt-btn.credit-btn", (event) => {
-        $("#credit-payment").show()
-        $("#cash-payment").hide()
-    })
-    .on("click", "#credit-pay-btn", "#cash-pay-btn", (event) => {
-        $(".payment").hide()
-    })
+    /* Payment Form */
     .on("click", ".pay-close", (event) => {
-        $(".payment").hide()
+        $(".payment").hide();
     })
-
+    .on("click", ".credit-btn", (event) => {
+        $("#cash-payment").hide();
+        $("#credit-payment").fadeIn();
+        $(".credit-btn").css("opacity", "0.8").css("cursor","auto");
+        $(".cash-btn").css("opacity", "1").css("cursor","pointer");
+    })
+    .on("click", ".cash-btn", (event) => {
+        $("#credit-payment").hide();
+        $("#cash-payment").fadeIn();
+        $(".cash-btn").css("opacity", "0.8").css("cursor","auto");
+        $(".credit-btn").css("opacity", "1").css("cursor","pointer");
+    });
 
 
     /* Shopping Cart Additions */
