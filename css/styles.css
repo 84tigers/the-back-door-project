@@ -273,12 +273,10 @@ header {
     border: none;
     background-color: rgba(152, 95, 111, 1);
 }
-
 .fa-shopping-cart {
     cursor: pointer;
     font-size: 25px;
 }
-
 .cart {
     background-color: white;
     border-radius: 10px;
@@ -301,12 +299,10 @@ header {
 .total-items {
     margin: 10px;
 }
-
 .item {
     display: flex;
     justify-content: space-between;
 }
-
 .totals {
     border-top: 2px solid rgba(78, 76, 103, 1);
     margin: 10px;
@@ -315,7 +311,6 @@ header {
     display: flex;
     justify-content: space-between;
 }
-
 .checkout {
     cursor: pointer;
     position: relative;
@@ -335,7 +330,6 @@ header {
     width: 100%;
     height: 20px;
 }
-
 .close-btn {
     cursor: pointer;
     position: absolute;
@@ -357,9 +351,7 @@ header {
     justify-content: flex-start;
     width: 100%;
 }
-
 .payment {
-
     width: 80%;
     max-width: 400px;
     height: 280px;
@@ -370,12 +362,11 @@ header {
     transform: translateX(-50%);
     box-shadow: 0 1px 12px rgba(93, 94, 96, 1);
     border-radius: 10px;
-
-
 } 
-
-#pay-total {
-    height: 10%;
+.pay-total {
+    display: flex;
+    justify-content: space-between;
+    width: 180px;
     margin-left: 10px;
 }
 
@@ -415,10 +406,6 @@ header {
    margin-left: 10px;
 }
 
-#change-due {
-    margin-left: 10px;
-}
-
 .tender {
     border: none;
     background-color: rgba(249, 237, 212, 1);
@@ -426,7 +413,6 @@ header {
     color: rgba(78, 76, 103, 1);
     width: 90%;
 }
-
 #cash-pay-btn {
     position: fixed;
     right: 6%;
@@ -441,16 +427,13 @@ header {
 }
 
 /* CREDIT CARD FORM */
-
 #credit-payment {
     padding: 0 0 15% 0;
 }
-
 #credit-pay-btn, #cvv-num, #exp-date, #card-num {
     margin: 1 auto;
    margin-bottom: 1.5em;
 }
-
 #cvv-num{
     width: 20%;
     align-self: flex-start;
@@ -460,7 +443,6 @@ header {
     border-bottom: 2px solid  rgba(152, 95, 111, 1);
     color: rgba(78, 76, 103, 1);
 }
-
 #exp-date {
     width: 60%;
     align-self: flex-start;
@@ -471,7 +453,6 @@ header {
     color: rgba(78, 76, 103, 1);
 
 }
-
 #card-num {
     width: 92%;
     align-self: flex-start;
@@ -481,12 +462,10 @@ header {
     border-bottom: 2px solid  rgba(152, 95, 111, 1);
     color: rgba(78, 76, 103, 1);
 }
-
 .credit-label {
     margin-left: 10px;
     display: block;
 }
-
 #credit-pay-btn {
     position: fixed;
     right: 6%;
@@ -516,6 +495,11 @@ header {
     max-height: 500px;
     overflow: auto;
 }
+.payment-data {
+    font-family: 'Abril Fatface', cursive;
+
+}
+
 /***********************************/
 /**         MEDIA QUERIES         **/
 /***********************************/

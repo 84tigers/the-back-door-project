@@ -286,7 +286,7 @@
                 </button>
             </section>
             <p class="cart-title">your cart:</p>
-            <section id="door-list">
+            <section class="door-list">
                 <section class="item">
                     <p>Door name</p>
                     <p>($)</p>
@@ -304,15 +304,15 @@
         <section class="totals">
             <section class="totals-line">
                 <p>Subtotal:</p>
-                <p id="subTotal">($)</p>
+                <p class="subTotal">($)</p>
             </section>
             <section class="totals-line">
                 <p>Sales Tax:</p>
-                <p id="salesTax">($)</p>
+                <p class="salesTax">($)</p>
             </section>
             <section class="totals-line">
-                <p>Total:</p>
-                <p id="total">($)</p>
+                <p class="payment-data">Total:</p>
+                <p class="total payment-data">($)</p>
             </section>
         </section>
         <button class="checkout" type="button">Check Out</button>
@@ -325,14 +325,19 @@
             <i class="fas fa-times pay-close"></i>
         </div>
         <form id="cash-payment">
-            <p id="pay-total">Total:($)</p>
+            <section class="pay-total">
+                <p class="payment-data">Total:</p>
+                <p class="total payment-data">($)</p>
+            </section>
             <p class="tender-amt">Tendered Amount:</p>
             <input type="text" class="tender" placeholder="$">
-            <p id="change-due">Change:($)</p>
             <button class="pay" id="cash-pay-btn" type="button">submit</button>
         </form>
         <form id="credit-payment">
-            <p id="pay-total">($)</p>
+            <section class="pay-total">
+                <p class="payment-data">Total:</p>
+                <p class="total payment-data">($)</p>
+            </section>
             <label class="credit-label" for="card-num">Credit Card Number:</label>
             <input type="text" id="card-num" name="card-num" placeholder="Card number">
             <label class="credit-label" for="exp-date">Expiration Date:</label>
@@ -344,45 +349,49 @@
         </form>
     </div>
 
-<!-- RECEIPT -->
+    <!-- RECEIPT -->
     <div id="receipt">
-            <section class="total-items">
-                <section class="cart-close-btn">
-                    <button class="close-btn" id="receipt-close" type="button">
-                        <i class="fas fa-times"></i>
-                    </button>
+        <section class="total-items">
+            <section class="cart-close-btn">
+                <button class="close-btn" id="receipt-close" type="button">
+                    <i class="fas fa-times"></i>
+                </button>
+            </section>
+            <p class="cart-title">receipt:</p>
+            <section class="door-list">
+                <section class="item">
+                    <p>Door name</p>
+                    <p>($)</p>
                 </section>
-                <p class="cart-title">receipt:</p>
-                <section id="door-list">
-                    <section class="item">
-                        <p>Door name</p>
-                        <p>($)</p>
-                    </section>
-                    <section class="item">
-                        <p>Door name</p>
-                        <p>($)</p>
-                    </section>
-                    <section class="item">
-                        <p>Door name</p>
-                        <p>($)</p>
-                    </section>
+                <section class="item">
+                    <p>Door name</p>
+                    <p>($)</p>
+                </section>
+                <section class="item">
+                    <p>Door name</p>
+                    <p>($)</p>
                 </section>
             </section>
-            <section class="totals">
-                <section class="totals-line">
-                    <p>Subtotal:</p>
-                    <p id="subTotal">($)</p>
-                </section>
-                <section class="totals-line">
-                    <p>Sales Tax:</p>
-                    <p id="salesTax">($)</p>
-                </section>
-                <section class="totals-line">
-                    <p>Total:</p>
-                    <p id="total">($)</p>
-                </section>
+        </section>
+        <section class="totals" id="receipt-totals">
+            <section class="totals-line">
+                <p>Subtotal:</p>
+                <p class="subTotal">($)</p>
             </section>
-        </div>
+            <section class="totals-line">
+                <p>Sales Tax:</p>
+                <p class="salesTax">($)</p>
+            </section>
+            <section class="totals-line">
+                <p class="payment-data">Total:</p>
+                <p class="total payment-data">($)</p>
+            </section>
+            <section class="totals-line">
+                <p class="payment-data">Amount Paid:</p>
+                <p class="total payment-data amt-paid"></p>
+            </section>
+        </section>
+    </div>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
