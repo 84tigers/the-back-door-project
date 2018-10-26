@@ -20,6 +20,7 @@ $(document).ready(() => {
     /* Shopping Cart */
     .on("click", ".shopping-cart", (event) => {
         $(".cart").show();
+
     })
     .on("click", ("#close-btn"), (event) => {
         $(".cart").hide();
@@ -54,9 +55,9 @@ $(document).ready(() => {
 
     // DISPLAY TOTAL
     const displayTotals = (subTotal, salesTax, total) => {
-        $("#subTotal").text(`$${subTotal}`);
-        $("#salesTax").text(`$${salesTax}`);
-        $("#total").text(`$${total}`);
+        $("#subTotal").text(`$${subTotal.toFixed(2)}`);
+        $("#salesTax").text(`$${(Math.round(salesTax*100)/100).toFixed(2)}`);
+        $("#total").text(`$${(Math.round(total*100)/100).toFixed(2)}`);
     };
 
     // Add door to cart
@@ -81,9 +82,6 @@ $(document).ready(() => {
     };
     // Listens for click on cart plus, then pushes to array
     $(document).on("click", ".fa-cart-plus", (event) => {
-        // let container = 
-        // Need to take data from container
-
         const doorName = event.target.parentElement.children[0].innerText;
         const doorPrice = Number(event.target.parentElement.children[1].innerText.replace(/\D/g, ''));
 
@@ -93,14 +91,6 @@ $(document).ready(() => {
         });
         display();
     });
-
-
-
-
-
-
-
-
 
 
 });

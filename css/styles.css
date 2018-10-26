@@ -359,6 +359,7 @@ header {
 }
 
 .payment {
+
     width: 80%;
     max-width: 400px;
     height: 280px;
@@ -369,6 +370,8 @@ header {
     transform: translateX(-50%);
     box-shadow: 0 1px 12px rgba(93, 94, 96, 1);
     border-radius: 10px;
+
+
 } 
 
 #pay-total {
@@ -397,7 +400,6 @@ header {
     margin-top: 10px;
     color: rgba(78, 76, 103, 1);
     cursor: pointer;
-    /* background-color: rgba(78, 76, 103, 1); */
 }
 
 /* FORM CONTAINING CASH INPUTS */
@@ -533,4 +535,9 @@ header {
     #menu-btn {
         display: none;
     }
+
+    header {
+        position: absolute;
+    }
+
 }
