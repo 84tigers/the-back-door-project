@@ -105,6 +105,11 @@ $(document).ready(() => {
         });
         display();
     });
+    let quantity = 0;
+    $(document).on("click", ".fa-cart-plus", (event) => {
+        counter++;
+        $("#amount-counter").text(quantity);
+    });
 
     /* Receipt */
     $(document)
