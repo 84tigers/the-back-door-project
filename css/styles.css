@@ -292,7 +292,7 @@ header {
     max-height: 500px;
     overflow: auto;
 }
-#cart-title {
+.cart-title {
     font-family: 'Abril Fatface', cursive;
     font-size: 22px;
     text-align: center;
@@ -336,7 +336,7 @@ header {
     height: 20px;
 }
 
-#close-btn {
+.close-btn {
     cursor: pointer;
     position: absolute;
     right: 10px;
@@ -500,6 +500,22 @@ header {
     cursor: pointer;
 }
 
+/********************/
+/**    RECEIPT     **/
+/********************/
+#receipt {
+    background-color: white;
+    border-radius: 10px;
+    width: 80%;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 1px 12px rgba(78, 76, 103, 1);
+    max-width: 400px;
+    max-height: 500px;
+    overflow: auto;
+}
 /***********************************/
 /**         MEDIA QUERIES         **/
 /***********************************/

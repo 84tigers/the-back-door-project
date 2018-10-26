@@ -281,11 +281,11 @@
     <div class="cart">
         <section class="total-items">
             <section class="cart-close-btn">
-                <button id="close-btn" type="button">
+                <button class="close-btn" id="cart-close" type="button">
                     <i class="fas fa-times"></i>
                 </button>
             </section>
-            <p id="cart-title">your cart:</p>
+            <p class="cart-title">your cart:</p>
             <section id="door-list">
                 <section class="item">
                     <p>Door name</p>
@@ -344,7 +344,45 @@
         </form>
     </div>
 
-
+<!-- RECEIPT -->
+    <div id="receipt">
+            <section class="total-items">
+                <section class="cart-close-btn">
+                    <button class="close-btn" id="receipt-close" type="button">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </section>
+                <p class="cart-title">receipt:</p>
+                <section id="door-list">
+                    <section class="item">
+                        <p>Door name</p>
+                        <p>($)</p>
+                    </section>
+                    <section class="item">
+                        <p>Door name</p>
+                        <p>($)</p>
+                    </section>
+                    <section class="item">
+                        <p>Door name</p>
+                        <p>($)</p>
+                    </section>
+                </section>
+            </section>
+            <section class="totals">
+                <section class="totals-line">
+                    <p>Subtotal:</p>
+                    <p id="subTotal">($)</p>
+                </section>
+                <section class="totals-line">
+                    <p>Sales Tax:</p>
+                    <p id="salesTax">($)</p>
+                </section>
+                <section class="totals-line">
+                    <p>Total:</p>
+                    <p id="total">($)</p>
+                </section>
+            </section>
+        </div>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
