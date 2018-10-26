@@ -404,6 +404,7 @@ header {
 #cash-payment {
     flex-basis: 100%;
     padding: 0 0 15% 0;
+    display: none;
 }
 /* CASH INPUT  */
 .tender-amt, .tender  {
