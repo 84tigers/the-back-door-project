@@ -22,13 +22,13 @@
             <i class="fas fa-times menu-close"></i>
         </button>
         <div class="clearfix"></div>
-        <div class="drop-menu">
+        <nav class="drop-menu">
             <a href="#glass">Glass</a>
             <a href="#wood">Wood</a>
             <a href="#metal">Metal</a>
             <a href="#trap">Trap</a>
             <a href="#home">Home</a>
-        </div>
+        </nav>
     </header>
     <div id="home"></div>
     <section id="info">
@@ -37,7 +37,7 @@
     </section>
     <section class="carousel">
         <div class="mySlides fade">
-            <a href="#glass"><img class="carousel-img" id="glass-carousel" src="/images/carousel-doors/glass-carousel-door.jpg"></a>
+            <a href="#glass"><img class="carousel-img" id="glass-carousel" src="images/carousel-doors/glass-carousel-door.jpg"></a>
             <a href="#glass" class="carousel-category">glass</a>
         </div>
         <div class="mySlides fade">
@@ -281,11 +281,11 @@
     <div class="cart">
         <section class="total-items">
             <section class="cart-close-btn">
-                <button id="close-btn" type="button">
+                <button class="close-btn" id="cart-close" type="button">
                     <i class="fas fa-times"></i>
                 </button>
             </section>
-            <p id="cart-title">your cart:</p>
+            <p class="cart-title">your cart:</p>
             <section id="door-list">
                 <section class="item">
                     <p>Door name</p>
@@ -325,23 +325,64 @@
             <i class="fas fa-times pay-close"></i>
         </div>
         <form id="cash-payment">
-
+            <p id="pay-total">Total:($)</p>
             <p class="tender-amt">Tendered Amount:</p>
-            <input type="number" class="tender">
-            <button class="pay" id="cash-pay-btn" type="button">pay</button>
+            <input type="text" class="tender" placeholder="$">
+            <p id="change-due">Change:($)</p>
+            <button class="pay" id="cash-pay-btn" type="button">submit</button>
         </form>
         <form id="credit-payment">
+            <p id="pay-total">($)</p>
             <label class="credit-label" for="card-num">Credit Card Number:</label>
             <input type="text" id="card-num" name="card-num" placeholder="Card number">
             <label class="credit-label" for="exp-date">Expiration Date:</label>
             <input type="text" id="exp-date" name="exp-date" placeholder="Exp date">
             <label class="credit-label" for="cvv-num">CVV:</label>
             <input type="text" id="cvv-num" name="cvv-num" placeholder="CVV">
-            <button class="pay" id="credit-pay-btn" type="button">pay</button>
+            <button class="pay" id="credit-pay-btn" type="button">submit</button>
+
         </form>
     </div>
 
-
+<!-- RECEIPT -->
+    <div id="receipt">
+            <section class="total-items">
+                <section class="cart-close-btn">
+                    <button class="close-btn" id="receipt-close" type="button">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </section>
+                <p class="cart-title">receipt:</p>
+                <section id="door-list">
+                    <section class="item">
+                        <p>Door name</p>
+                        <p>($)</p>
+                    </section>
+                    <section class="item">
+                        <p>Door name</p>
+                        <p>($)</p>
+                    </section>
+                    <section class="item">
+                        <p>Door name</p>
+                        <p>($)</p>
+                    </section>
+                </section>
+            </section>
+            <section class="totals">
+                <section class="totals-line">
+                    <p>Subtotal:</p>
+                    <p id="subTotal">($)</p>
+                </section>
+                <section class="totals-line">
+                    <p>Sales Tax:</p>
+                    <p id="salesTax">($)</p>
+                </section>
+                <section class="totals-line">
+                    <p>Total:</p>
+                    <p id="total">($)</p>
+                </section>
+            </section>
+        </div>
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
