@@ -65,9 +65,6 @@ $(document).ready(() => {
     };
     // Listens for click on cart plus, then pushes to array
     $(document).on("click", ".fa-cart-plus", (event) => {
-        // let container = 
-        // Need to take data from container
-
         const doorName = event.target.parentElement.children[0].innerText;
         const doorPrice = Number(event.target.parentElement.children[1].innerText.replace(/\D/g, ''));
 
