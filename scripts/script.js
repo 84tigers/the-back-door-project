@@ -20,20 +20,38 @@ $(document).ready(() => {
     })
     /* Shopping Cart */
     .on("click", ".shopping-cart", (event) => {
-        $(".cart").show()
-        $(".payment").hide();
+        $(".cart").show();
+
     })
     .on("click", ("#cart-close"), (event) => {
         $(".cart").hide();
     })
     .on("click", ".checkout", (event) => {
-        $(".cart").hide();
-        $(".payment").show();
+        $(".cart, #credit-payment").hide();
+        $(".payment, #cash-payment").show();
+        $(".cash-btn").css("opacity", "0.8").css("cursor","auto");
     })
-    /* Receipt */
+    /* Payment Form */
+    .on("click", ".pay-close", (event) => {
+        $(".payment").hide();
+    })
+    .on("click", ".credit-btn", (event) => {
+        $("#cash-payment").hide();
+        $("#credit-payment").fadeIn();
+        $(".credit-btn").css("opacity", "0.8").css("cursor","auto");
+        $(".cash-btn").css("opacity", "1").css("cursor","pointer");
+    })
+    .on("click", ".cash-btn", (event) => {
+        $("#credit-payment").hide();
+        $("#cash-payment").fadeIn();
+        $(".cash-btn").css("opacity", "0.8").css("cursor","auto");
+        $(".credit-btn").css("opacity", "1").css("cursor","pointer");
+    })   
+/* Receipt */
     .on("click", ("#receipt-close"), (event) => {
         $("#receipt").hide();
-    })
+    });
+
 
 
     /* Shopping Cart Additions */
@@ -70,9 +88,6 @@ $(document).ready(() => {
     };
     // Listens for click on cart plus, then pushes to array
     $(document).on("click", ".fa-cart-plus", (event) => {
-        // let container = 
-        // Need to take data from container
-
         const doorName = event.target.parentElement.children[0].innerText;
         const doorPrice = Number(event.target.parentElement.children[1].innerText.replace(/\D/g, ''));
 

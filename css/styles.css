@@ -359,17 +359,25 @@ header {
 }
 
 .payment {
-     width: 80%;
-     max-width: 400px;
-     height: 280px;
-     background-color: white;
-     position: fixed;
-     top: 20%;
-     left: 50%;
-     transform: translateX(-50%);
-     box-shadow: 0 1px 12px rgba(93, 94, 96, 1);
-     border-radius: 10px;
+
+    width: 80%;
+    max-width: 400px;
+    height: 280px;
+    background-color: white;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 1px 12px rgba(93, 94, 96, 1);
+    border-radius: 10px;
+
+
 } 
+
+#pay-total {
+    height: 10%;
+    margin-left: 10px;
+}
 
 /* INDIVIDUAL PAYMENT BUTTONS AT TOP OF PAYMENT CONTAINER */
 .paymnt-btn {
@@ -387,25 +395,28 @@ header {
 /* INDIVIDUAL CLOSE BUTTON */
 .pay-close {
     border: none;
-    border-style: none;
     margin-left: auto;
     margin-right: 10px;
     margin-top: 10px;
     color: rgba(78, 76, 103, 1);
+    cursor: pointer;
 }
 
 /* FORM CONTAINING CASH INPUTS */
 #cash-payment {
     flex-basis: 100%;
-    padding: 15% 0;
+    padding: 0 0 15% 0;
     display: none;
-
 }
 /* CASH INPUT  */
 .tender-amt, .tender  {
    margin: 1 auto;
    margin-bottom: 1.5em;
    margin-left: 10px;
+}
+
+#change-due {
+    margin-left: 10px;
 }
 
 .tender {
@@ -417,9 +428,9 @@ header {
 }
 
 #cash-pay-btn {
-    position: relative;
-    left: 70%;
-    transform: translateX(-50%);
+    position: fixed;
+    right: 6%;
+    bottom: 6%;
     border-style: none;
     background-color: rgba(78, 76, 103, 1);
     border-radius: 5px;
@@ -432,7 +443,7 @@ header {
 /* CREDIT CARD FORM */
 
 #credit-payment {
-    padding: 15% 0;
+    padding: 0 0 15% 0;
 }
 
 #credit-pay-btn, #cvv-num, #exp-date, #card-num {
@@ -462,7 +473,7 @@ header {
 }
 
 #card-num {
-    width: 80%;
+    width: 92%;
     align-self: flex-start;
     margin-left: 10px;
     border: none;
@@ -477,9 +488,9 @@ header {
 }
 
 #credit-pay-btn {
-    position: relative;
-    left: 57%;
-    transform: translateX(-50%);
+    position: fixed;
+    right: 6%;
+    /* bottom: 6%; */
     border-style: none;
     background-color: rgba(78, 76, 103, 1);
     border-radius: 5px;
@@ -540,7 +551,9 @@ header {
     #menu-btn {
         display: none;
     }
+
     header {
         position: absolute;
     }
+
 }
