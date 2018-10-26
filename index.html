@@ -13,94 +13,335 @@
 </head>
 
 <body>
-
-    <!--  <header>  -->
-    <p class="title">the back door</p>
-    <button id="menu-btn" type="button">
-        <!-- hamburger -->
-        <i class="fas fa-bars"></i>
-        <!-- close button -->
-        <i class="fas fa-times menu-close"></i>
-    </button>
-    <div class="clearfix"></div>
-    <div class="drop-menu">
-        <a href="#glass">Glass</a>
-        <a href="#wood">Wood</a>
-        <a href="#metal">Metal</a>
-        <a href="#trap">Trap</a>
-        <a href="#info">Home</a>
-    </div>
+    <header>
+        <p class="title">the back door</p>
+        <button id="menu-btn" type="button">
+            <!-- hamburger -->
+            <i class="fas fa-bars"></i>
+            <!-- close button -->
+            <i class="fas fa-times menu-close"></i>
+        </button>
+        <div class="clearfix"></div>
+        <div class="drop-menu">
+            <a href="#glass">Glass</a>
+            <a href="#wood">Wood</a>
+            <a href="#metal">Metal</a>
+            <a href="#trap">Trap</a>
+            <a href="#home">Home</a>
+        </div>
     </header>
+    <div id="home"></div>
     <section id="info">
         <p>Welcome!</p>
         <p>Come on knock on our door if you need more. We welcome you to come on through to the other side with us.</p>
     </section>
     <section class="carousel">
-        <!-- Carousel goes here -->
-        <i class="fas fa-angle-left"></i>
-        <!-- add an array of categories? -->
-        <p class="carousel-category">category here</p>
-        <i class="fas fa-angle-right"></i>
-    </section>
-    <section id="glass">
+        <div class="mySlides fade">
+            <a href="#glass"><img class="carousel-img" id="glass-carousel" src="images/carousel-doors/glass-carousel-door.jpg"></a>
+            <a href="#glass" class="carousel-category">glass</a>
+        </div>
+        <div class="mySlides fade">
+            <a href="#wood"><img class="carousel-img" id="wood-carousel" src="images/carousel-doors/wood-pattern-carousel-door.jpg"></a>
+            <a href="#wood" class="carousel-category">wood</a>
+        </div>
+        <div class="mySlides fade">
+            <a href="#metal"><img class="carousel-img" id="metal-carousel" src="images/carousel-doors/metal-carousel-door.jpg"></a>
+            <a href="#metal" class="carousel-category">metal</a>
+        </div>
+        <div class="mySlides fade">
+            <a href="#trap"><img class="carousel-img" id="trap-carousel" src="images/carousel-doors/trap-carousel-door.jpg"></a>
+            <a href="#trap" class="carousel-category">trap</a>
+        </div>
 
-        <!----------- DOOR ITEM TEMPLATE ---------->
+        <i class="fas fa-angle-left prev" onclick="plusSlides(-1)"></i>
+        <i class="fas fa-angle-right next" onclick="plusSlides(1)"></i>
+    </section>
+
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <p id="glass" class="ctg-title">glass</p>
+
+    <section class="store-doors">
         <div class="door-info">
-            <img class="door" src="images/doors.jpg" alt="">
+            <img class="door" src="images/glass/glass1.jpg">
             <div class="door-info-txt">
-                <p class="item-name">Jim Morrison</p>
-                <p class="item-price">$699</p>
-                <!-- <i class="door-cart" class="fas fa-cart-plus"></i> -->
+                <p class="item-name">Peace Frog</p>
+                <p class="item-price">$259</p>
+                <i class="fas fa-cart-plus"></i>
             </div>
         </div>
-        <!----------------------------------------->
-
+        <div class="door-info">
+            <img class="door" src="images/glass/glass2.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">Land Ho!</p>
+                <p class="item-price">$409</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/glass/glass3.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">Ship of Fools</p>
+                <p class="item-price">$309</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/glass/glass4.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">Blue Sunday</p>
+                <p class="item-price">$211</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/glass/glass5.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">The Spy</p>
+                <p class="item-price">$416</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/glass/glass6.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">Indian Summer</p>
+                <p class="item-price">$234</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
     </section>
-    <section id="wood">
 
-    </section>
-    <section id="metal">
+    <p id="wood" class="ctg-title">wood</p>
 
+    <section class="store-doors">
+        <div class="door-info">
+            <img class="door" src="images/wood/wood1.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">Back Door Man</p>
+                <p class="item-price">$332</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/wood/wood2.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">Light My Fire</p>
+                <p class="item-price">$710</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/wood/wood3.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">The Crystal Ship</p>
+                <p class="item-price">$232</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/wood/wood4.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">Soul Kitchen</p>
+                <p class="item-price">$333</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/wood/wood5.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">The End</p>
+                <p class="item-price">$1143</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/wood/wood6.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">I Looked At You</p>
+                <p class="item-price">$220</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
     </section>
-    <section id="trap">
 
+    <p id="metal" class="ctg-title">metal</p>
+    <section class="store-doors">
+        <div class="door-info">
+            <img class="door" src="images/metal/metal2.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">The Soft Parade</p>
+                <p class="item-price">$835</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/metal/metal3.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">Do It</p>
+                <p class="item-price">$309</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/metal/metal4.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">Shaman's Blues</p>
+                <p class="item-price">$448</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/metal/metal6.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">Wild Child</p>
+                <p class="item-price">$235</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/metal/metal7.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">Running Blue</p>
+                <p class="item-price">$226</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/metal/metal8.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">Wishful Sinful</p>
+                <p class="item-price">$256</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
     </section>
-    <button type="button">
+
+    <p id="trap" class="ctg-title">trap</p>
+
+    <section class="store-doors" id="trap-section">
+        <div class="door-info">
+            <img class="door" src="images/trap/trap1.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">When I'm Gone</p>
+                <p class="item-price">$421</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/trap/trap2.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">My <i class="fas fa-heart"></i> Will Go On</p>
+                <p class="item-price">$1997</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/trap/trap4.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">"D'oh"</p>
+                <p class="item-price">$1989</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/trap/trap6.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">Mr. DNA</p>
+                <p class="item-price">$1993</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/trap/trap7.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">Mike Wazowski</p>
+                <p class="item-price">$2001</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+        <div class="door-info">
+            <img class="door" src="images/trap/trap8.jpg">
+            <div class="door-info-txt">
+                <p class="item-name">The Spiders</p>
+                <p class="item-price">$2002</p>
+                <i class="fas fa-cart-plus"></i>
+            </div>
+        </div>
+    </section>
+    <button type="button" class="shopping-cart">
         <i class="fas fa-shopping-cart"></i>
     </button>
 
     <div class="cart">
-        <p>Door name (q) ($)</p>
-        <p>Door name (q) ($)</p>
-        <p>Door name (q) ($)</p>
-        <p>Subtotal: ($)</p>
-        <p>Sales Tax: ($)</p>
-        <p>Total: ($)</p>
-        <button class="checkout" type="button"></button>
+        <section class="total-items">
+            <section class="cart-close-btn">
+                <button id="close-btn" type="button">
+                    <i class="fas fa-times"></i>
+                </button>
+            </section>
+            <p id="cart-title">your cart:</p>
+            <section id="door-list">
+                <section class="item">
+                    <p>Door name</p>
+                    <p>($)</p>
+                </section>
+                <section class="item">
+                    <p>Door name</p>
+                    <p>($)</p>
+                </section>
+                <section class="item">
+                    <p>Door name</p>
+                    <p>($)</p>
+                </section>
+            </section>
+        </section>
+        <section class="totals">
+            <section class="totals-line">
+                <p>Subtotal:</p>
+                <p id="subTotal">($)</p>
+            </section>
+            <section class="totals-line">
+                <p>Sales Tax:</p>
+                <p id="salesTax">($)</p>
+            </section>
+            <section class="totals-line">
+                <p>Total:</p>
+                <p id="total">($)</p>
+            </section>
+        </section>
+        <button class="checkout" type="button">Check Out</button>
     </div>
 
     <div class="payment">
         <div class="payment-btn-container">
-            <button type="button" class="paymnt-btn" class="cash-btn">cash</button>
-            <button type="button" class="paymnt-btn" class="credit-btn">credit</button>
+            <button type="button" class="paymnt-btn cash-btn">cash</button>
+            <button type="button" class="paymnt-btn credit-btn">credit</button>
             <i class="fas fa-times pay-close"></i>
         </div>
         <form id="cash-payment">
-
+            <p id="pay-total">Total:($)</p>
             <p class="tender-amt">Tendered Amount:</p>
-            <input type="number" class="tender">
-            <button class="pay" id="cash-pay-btn" type="button">pay</button>
+            <input type="text" class="tender" placeholder="$">
+            <p id="change-due">Change:($)</p>
+            <button class="pay" id="cash-pay-btn" type="button">submit</button>
         </form>
         <form id="credit-payment">
+            <p id="pay-total">($)</p>
             <label class="credit-label" for="card-num">Credit Card Number:</label>
-            <input type="number" id="card-num" name="card-num" placeholder="Card number">
+            <input type="text" id="card-num" name="card-num" placeholder="Card number">
             <label class="credit-label" for="exp-date">Expiration Date:</label>
-            <input type="number" id="exp-date" name="exp-date" placeholder="Exp date">
+            <input type="text" id="exp-date" name="exp-date" placeholder="Exp date">
             <label class="credit-label" for="cvv-num">CVV:</label>
-            <input type="number" id="cvv-num" name="cvv-num" placeholder="CVV">
-            <button class="pay" id="credit-pay-btn" type="button">pay</button>
+            <input type="text" id="cvv-num" name="cvv-num" placeholder="CVV">
+            <button class="pay" id="credit-pay-btn" type="button">submit</button>
         </form>
-    </div> -->
+    </div>
 
 
 
