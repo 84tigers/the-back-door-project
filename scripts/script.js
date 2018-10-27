@@ -14,6 +14,11 @@ $(document).ready(() => {
             $(event.target).hide();
             $(".menu-close").show();
         })
+        .on("click", ".drop-menu a", () => {
+            $(".drop-menu").hide();
+            $(".menu-close").hide();
+            $(".fa-bars").show();
+        })
         .on("click", ".menu-close", (event) => {
             $(".drop-menu").hide();
             $(event.target).hide();
