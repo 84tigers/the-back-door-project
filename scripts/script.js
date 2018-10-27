@@ -5,6 +5,7 @@ $(document).ready(() => {
     $(".cart").hide();
     $(".payment").hide();
     $("#receipt").hide();
+    $("#amount-counter").hide();
 
     $(document)
         /* Drop-down menu */
@@ -12,6 +13,11 @@ $(document).ready(() => {
             $(".drop-menu").css("display", "flex");
             $(event.target).hide();
             $(".menu-close").show();
+        })
+        .on("click", ".drop-menu a", () => {
+            $(".drop-menu").hide();
+            $(".menu-close").hide();
+            $(".fa-bars").show();
         })
         .on("click", ".menu-close", (event) => {
             $(".drop-menu").hide();
@@ -23,13 +29,19 @@ $(document).ready(() => {
             $(".cart").show();
             $(".payment").hide();
         })
-        .on("click", ("#cart-close"), (event) => {
+        .on("click", "#cart-close", (event) => {
             $(".cart").hide();
         })
         .on("click", ".checkout", (event) => {
             $(".cart, #credit-payment").hide();
             $(".payment, #cash-payment").show();
             $(".cash-btn").css("opacity", "0.8").css("cursor", "auto");
+        })
+        .on("mouseenter", ".shopping-cart", () => {
+            $("#amount-counter").css("background-color", "rgba(152, 95, 111, 1)");
+        })
+        .on("mouseleave", ".shopping-cart", () => {
+            $("#amount-counter").css("background-color", "rgba(78, 76, 103, 1)");
         })
         /* Payment Form */
         .on("click", ".pay-close", (event) => {
@@ -122,11 +134,9 @@ $(document).ready(() => {
                 const cashReceived = Number(tender.replace(/\$/g, ''));
                 const totalCost = Number($(".total").eq(0).text().replace(/\$/g, ''));
 
-                $("#receipt-totals").append(`
-                <section class="totals-line change-container">
+                $(".change-container").html(`
                     <p class="payment-data change-due">Change:</p>
                     <p class="payment-data">$${(Math.round((cashReceived - totalCost) * 100) / 100).toFixed(2)}</p>
-                </section>
             `);
                 $("#receipt").show();
             } else if ($(event.target).attr("id") === "credit-pay-btn") {
@@ -134,6 +144,7 @@ $(document).ready(() => {
             }
             $(".fa-minus-square").hide();
             $(".payment").hide();
+            $("input").val("");
         })
         .on("click", "#receipt-close", (event) => {
             $("#receipt").hide();
