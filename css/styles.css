@@ -89,6 +89,9 @@ header {
     text-decoration: none;
     color: black;
 }
+.drop-menu a:hover {
+    color: rgba(249, 237, 212, 1);
+}
 
 /********************/
 /**      INFO      **/
@@ -265,16 +268,6 @@ header {
 /***********************************/
 /**         CHECKOUT FORM         **/
 /***********************************/
-#amount-counter {
-    position: fixed;
-    bottom: 35px;
-    right: 6px;
-    background-color: red;
-    color: white;
-    font-size: 1em;
-    border-radius: 100%;
-    width: 1.25em;
- }
 
 .shopping-cart {
     position: fixed;
@@ -286,19 +279,23 @@ header {
     border: none;
     background-color: rgba(152, 95, 111, 1);
 }
+.shopping-cart:hover {
+    background-color: rgba(78, 76, 103, 1);
+    color: rgba(249, 237, 212, 1);
+}
 #amount-counter {
     position: fixed;
     bottom: 35px;
     right: 6px;
-    background-color: red;
-    color: white;
-    font-size: 1em;
-    border-radius: 100%;
-    width: 1.25em;
-}
-.shopping-cart:hover {
     background-color: rgba(78, 76, 103, 1);
     color: rgba(249, 237, 212, 1);
+    font-size: 1em;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .fa-shopping-cart {
     cursor: pointer;
@@ -328,6 +325,9 @@ header {
     max-width: 400px;
     max-height: 500px;
     overflow: auto;
+}
+.cart p {
+    margin: 5px 0;
 }
 
 .cart-title {
@@ -536,9 +536,15 @@ header {
     max-height: 500px;
     overflow: auto;
 }
+#receipt p {
+    margin: 5px 0;
+}
 .payment-data {
     font-family: 'Abril Fatface', cursive;
 
+}
+.change-container {
+    color: rgba(78, 76, 103, 1);
 }
 
 /***********************************/
