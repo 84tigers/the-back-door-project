@@ -140,6 +140,7 @@ $(document).ready(() => {
             `);
                 $("#receipt").show();
             } else if ($(event.target).attr("id") === "credit-pay-btn") {
+                $(".change-container").html(``);
                 $("#receipt").show();
             }
             $(".fa-minus-square").hide();
